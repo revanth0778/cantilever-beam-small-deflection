@@ -1,0 +1,47 @@
+seto beam
+pnt p1 0 0 0
+pnt p2 625 0 0
+pnt p3 1250 0 0
+pnt p4 1875 0 0
+pnt p5 2500 0 0
+pnt p6 3125 0 0
+pnt p7 3750 0 0
+pnt p8 4375 0 0
+pnt p9 5000 0 0
+pnt p10 5625 0 0
+pnt p11 6250 0 0
+pnt p12 6875 0 0
+pnt p13 7500 0 0
+pnt p14 8125 0 0
+pnt p15 8750 0 0
+pnt p16 9375 0 0
+pnt p17 10000 0 0
+
+line l1 p1 p2 50 
+line l2 p2 p3 50
+line l3 p3 p4 50
+line l4 p4 p5 50
+line l5 p5 p6 50
+line l6 p6 p7 50
+line l7 p7 p8 50
+line l8 p8 p9 50
+line l9 p9 p10 50
+line l10 p10 p11 50
+line l11 p11 p12 50
+line l12 p12 p13 50
+line l13 p13 p14 50
+line l14 p14 p15 50
+line l15 p15 p16 50
+line l16 p16 p17 50
+
+
+seta lines l l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15 l16  
+swep lines sweplines tra 0 150 0 10
+seta surfaces s A001 A002 A003 A004 A005 A006 A007 A008 A009 A010
+swep surfaces swepsurfaces tra 0 0 100 10
+setc beam
+elty beam he8
+mesh beam
+send beam abq
+rot -z
+frame
